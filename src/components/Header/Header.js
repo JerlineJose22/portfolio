@@ -4,7 +4,7 @@ import resume from '../../resume/Resume.pdf'
 
 const Header = ({ toggle }) => {
   return (
-    <div className="Container" style={{padding: 0}}>
+    <div className="Container" style={{ padding: 0 }}>
       <Nav>
         <Logo to="/">
           <img
@@ -31,7 +31,8 @@ const Header = ({ toggle }) => {
           <a
             className="btn PrimaryBtn"
             href={resume}
-            download="Jerline_jose_remuse.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Resume
           </a>

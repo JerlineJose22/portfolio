@@ -17,7 +17,7 @@ function Skills() {
               {stackList.map((list, index) => (
 
                 <ScrollAnimation animateIn="fadeInLeft" key={index}>
-                  <div style={{margin:"50px"}}>
+                  <div style={{margin:"50px",textAlign:'center'}}>
                     <img src={list.img} alt={list.name} style={{ height: "100px", marginTop: '50px' }} />
                     <h6>{list.name}</h6>
                   </div>

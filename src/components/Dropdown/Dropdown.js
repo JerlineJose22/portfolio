@@ -2,14 +2,17 @@ import React from "react";
 import { FaTimes } from "react-icons/fa";
 import styled from "@emotion/styled";
 import { Link as ScrollLink } from "react-scroll";
+import resume from '../../resume/Resume.pdf'
 
 const SiderBar = styled.div`
-  background: #151418;
+  background-color: rgba(0,0,0, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius:30px;
   position: fixed;
-  height: 100%;
-  width: 100%;
+  height: 70%;
+  width: 70%;
   /* top: 0; */
-  left: 0;
+  left: 100;
   z-index: 999;
   transition: 0.3s ease-in-out;
   display: flex;
@@ -17,7 +20,7 @@ const SiderBar = styled.div`
   flex-direction: column;
   align-items: center;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+  right: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 
 const CloseIcon = styled(FaTimes)`
@@ -75,6 +78,13 @@ function Dropdown({ isOpen, toggle }) {
         >
           About
         </NavLink>
+
+        <NavLink
+          onClick={toggle}
+          className="menu-item"
+          to="skills">
+          Skills
+        </NavLink>
         <NavLink
           onClick={toggle}
           className="menu-item"
@@ -86,7 +96,7 @@ function Dropdown({ isOpen, toggle }) {
       <NavBtn onClick={toggle}>
         <a
           className="btn PrimaryBtn"
-          href=""
+          href={resume}
           target="_blank"
           rel="noopener noreferrer"
         >

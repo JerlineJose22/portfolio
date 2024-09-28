@@ -174,5 +174,6 @@ video {
 @media (max-width: 554px) {
   .skills{
     grid-template-columns: auto auto;
+    margin-left: -30px;
   }
 }
